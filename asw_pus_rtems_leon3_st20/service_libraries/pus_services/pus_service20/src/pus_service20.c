@@ -1,5 +1,5 @@
 /*
- * pus_services_iface_v1.h
+ * pus_service20.c
  *
  *  Created on: Oct 26, 2024
  *      Author: Oscar Rodriguez Polo
@@ -24,45 +24,36 @@
  *
  ****************************************************************************/
 
+#include <public/pus_service20.h>
+#include <public/pus_sys_data_pool.h>
+#include "public/adc_drv.h"
 
-#ifndef PUBLIC__ICUASW_PUS_SERVICES_IFACE_V1_H
-#define PUBLIC__ICUASW_PUS_SERVICES_IFACE_V1_H
-
-
-#include "public/config.h"
-#include "public/basic_types.h"
-#include "public/serialize.h"
-#include "public/cdtchandler_iface_v1.h"
-#include "public/cdtcmemdescriptor_iface_v1.h"
-
-
-#include "public/tc_rate_ctrl.h"
-
+#include "public/ccsds_pus.h"
+#include "public/crc.h"
+#include "public/pus_tm_handler.h"
 #include "public/pus_service1.h"
 #include "public/pus_service3.h"
-#include "public/pus_service17.h"
-//TODO 01
-#include "public/pus_service20.h"
+#include "pus_service20/aux_pus_service20_tx_tm.h"
+#include "pus_service20/aux_pus_service20_exec_tc.h"
 
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-//Start up
-void pus_services_startup();
-
-//Reboot
-void pus_services_mng_reboot();
 
 
-//Do FDIR
-void pus_services_do_FDIR();
 
-//Update Params
-void pus_services_update_params();
+void pus_service20_exec_tc(tc_handler_t *ptc_handler){
 
-#ifdef __cplusplus
+	switch (ptc_handler->tc_df_header.subtype) {
+
+	//TODO 05 exec TC[20,X] using the corresponding pus_service3_exec_TC_20_X
+
+
+
+
+	default:
+		break;
+	}
+
+
+
 }
-#endif
-#endif // PUBLIC__ICUASW_PUS_SERVICES_IFACE_V1_H
+

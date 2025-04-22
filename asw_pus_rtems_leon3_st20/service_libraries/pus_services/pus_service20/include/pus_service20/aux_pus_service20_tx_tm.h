@@ -1,5 +1,5 @@
 /*
- * pus_services_iface_v1.h
+ * aux_pus_service20_tx_tm.h
  *
  *  Created on: Oct 26, 2024
  *      Author: Oscar Rodriguez Polo
@@ -25,44 +25,18 @@
  ****************************************************************************/
 
 
-#ifndef PUBLIC__ICUASW_PUS_SERVICES_IFACE_V1_H
-#define PUBLIC__ICUASW_PUS_SERVICES_IFACE_V1_H
-
+#ifndef SERVICE_LIBRARIES_PUS_SERVICES_PUS_SERVICE20_INCLUDE_PUS_SERVICE20_AUX_PUS_SERVICE20_TX_TM_H_
+#define SERVICE_LIBRARIES_PUS_SERVICES_PUS_SERVICE20_INCLUDE_PUS_SERVICE20_AUX_PUS_SERVICE20_TX_TM_H_
 
 #include "public/config.h"
-#include "public/basic_types.h"
-#include "public/serialize.h"
-#include "public/cdtchandler_iface_v1.h"
-#include "public/cdtcmemdescriptor_iface_v1.h"
+
+#include "public/pus_tm_handler.h"
+
+/**
+ * \brief transmit the TM[20,2] telemetry parameter
+ * \param validPID a valid PID identifier
+ */
+error_code_t pus_service20_tx_TM_20_2(uint16_t validPID);
 
 
-#include "public/tc_rate_ctrl.h"
-
-#include "public/pus_service1.h"
-#include "public/pus_service3.h"
-#include "public/pus_service17.h"
-//TODO 01
-#include "public/pus_service20.h"
-
-
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-//Start up
-void pus_services_startup();
-
-//Reboot
-void pus_services_mng_reboot();
-
-
-//Do FDIR
-void pus_services_do_FDIR();
-
-//Update Params
-void pus_services_update_params();
-
-#ifdef __cplusplus
-}
-#endif
-#endif // PUBLIC__ICUASW_PUS_SERVICES_IFACE_V1_H
+#endif /* SERVICE_LIBRARIES_PUS_SERVICES_PUS_SERVICE20_INCLUDE_PUS_SERVICE20_AUX_PUS_SERVICE20_TX_TM_H_ */

@@ -1,5 +1,5 @@
 /*
- * pus_services_iface_v1.h
+ * aux_pus_service20_tx_tm.c
  *
  *  Created on: Oct 26, 2024
  *      Author: Oscar Rodriguez Polo
@@ -24,45 +24,49 @@
  *
  ****************************************************************************/
 
-
-#ifndef PUBLIC__ICUASW_PUS_SERVICES_IFACE_V1_H
-#define PUBLIC__ICUASW_PUS_SERVICES_IFACE_V1_H
-
-
 #include "public/config.h"
-#include "public/basic_types.h"
-#include "public/serialize.h"
-#include "public/cdtchandler_iface_v1.h"
-#include "public/cdtcmemdescriptor_iface_v1.h"
-
-
-#include "public/tc_rate_ctrl.h"
-
+#include "public/pus_tm_handler.h"
 #include "public/pus_service1.h"
-#include "public/pus_service3.h"
-#include "public/pus_service17.h"
-//TODO 01
-#include "public/pus_service20.h"
 
+#include "pus_services/aux_pus_services_utils.h"
 
-#ifdef __cplusplus
-extern "C" {
-#endif
+/**
+ * \brief transmit the TM[20,2] telemetry
+ * \param validPID a valid PID identifier
+ */
+error_code_t pus_service20_tx_TM_20_2(uint16_t validPID){
 
-//Start up
-void pus_services_startup();
+	error_code_t error = 0;
 
-//Reboot
-void pus_services_mng_reboot();
+	tm_handler_t tm_handler;
 
+	//Alloc memory
+	error = tm_handler_mem_alloc_and_startup(&tm_handler);
 
-//Do FDIR
-void pus_services_do_FDIR();
+	if (0 == error) {
 
-//Update Params
-void pus_services_update_params();
+		//N=1 -> TM
+		error =tm_handler_append_uint8_appdata_field(&tm_handler,1);
 
-#ifdef __cplusplus
+		//PID-> TM
+		error += tm_handler_append_uint16_appdata_field(&tm_handler, validPID);
+
+		//PIDValue -> TM
+		error += pus_services_TM_X_Y_write_PIDValue(&tm_handler, validPID);
+
+		//close and Tx only in no error
+		if (0 == error) {
+
+			error = tm_handler_close_and_tx(&tm_handler, 20, 2);
+		}
+		//free memory
+		tm_handler_free_mem(&tm_handler);
+	}
+
+	return error;
+
 }
-#endif
-#endif // PUBLIC__ICUASW_PUS_SERVICES_IFACE_V1_H
+
+
+
+

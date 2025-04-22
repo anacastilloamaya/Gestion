@@ -92,7 +92,12 @@ tc_accept_report_t pus_service1_tc_acceptation(tc_handler_t *ptc_handler) {
 				}
 				break;
 			//TODO 02 Accept TC[20,1] & TC[20,3]
+			case (20):
+			   switch (ptc_handler->tc_df_header.subtype) {
+				case (1):
+				case (3):
 
+				    break;
 
 			default:
 				//TC is not accepted

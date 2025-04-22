@@ -1,5 +1,5 @@
 /*
- * pus_services_iface_v1.h
+ * aux_pus_service20_exec_tc.h
  *
  *  Created on: Oct 26, 2024
  *      Author: Oscar Rodriguez Polo
@@ -24,45 +24,31 @@
  *
  ****************************************************************************/
 
-
-#ifndef PUBLIC__ICUASW_PUS_SERVICES_IFACE_V1_H
-#define PUBLIC__ICUASW_PUS_SERVICES_IFACE_V1_H
-
+#ifndef SERVICE_LIBRARIES_PUS_SERVICES_PUS_SERVICE20_INCLUDE_PUBLIC_AUX_PUS_SERVICE20_EXEC_TC_H_
+#define SERVICE_LIBRARIES_PUS_SERVICES_PUS_SERVICE20_INCLUDE_PUBLIC_AUX_PUS_SERVICE20_EXEC_TC_H_
 
 #include "public/config.h"
-#include "public/basic_types.h"
-#include "public/serialize.h"
-#include "public/cdtchandler_iface_v1.h"
-#include "public/cdtcmemdescriptor_iface_v1.h"
+#include <public/pus_tc_handler.h>
+
+/**
+ * \brief executes a TC[20,1] telecommand
+ * \param ptc_handler pointer to the tc handler
+ */
+void pus_service20_exec_TC_20_1(tc_handler_t *ptc_handler);
+
+/**
+ * \brief executes a TC[20,3] telecommand
+ * \param ptc_handler pointer to the tc handler
+ */
+void pus_service20_exec_TC_20_3(tc_handler_t *ptc_handler);
+
+/**
+ * \brief executes a TC[20,3] telecommand
+ * \param ptc_handler pointer to the tc handler
+ */
+void pus_service20_TC_20_3_set_param(tc_handler_t *ptc_handler);
 
 
-#include "public/tc_rate_ctrl.h"
-
-#include "public/pus_service1.h"
-#include "public/pus_service3.h"
-#include "public/pus_service17.h"
-//TODO 01
-#include "public/pus_service20.h"
 
 
-#ifdef __cplusplus
-extern "C" {
-#endif
-
-//Start up
-void pus_services_startup();
-
-//Reboot
-void pus_services_mng_reboot();
-
-
-//Do FDIR
-void pus_services_do_FDIR();
-
-//Update Params
-void pus_services_update_params();
-
-#ifdef __cplusplus
-}
-#endif
-#endif // PUBLIC__ICUASW_PUS_SERVICES_IFACE_V1_H
+#endif /* SERVICE_LIBRARIES_PUS_SERVICES_PUS_SERVICE20_INCLUDE_PUBLIC_AUX_PUS_SERVICE20_EXEC_TC_H_ */
