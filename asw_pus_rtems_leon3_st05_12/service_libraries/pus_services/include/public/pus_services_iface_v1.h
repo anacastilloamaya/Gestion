@@ -39,7 +39,8 @@
 #include "public/tc_rate_ctrl.h"
 
 //TODO 01 Add ST[05] and ST[12] modules
-
+#include "public/pus_service5.h"
+#include "public/pus_service12.h"
 #include "public/pus_service1.h"
 #include "public/pus_service3.h"
 #include "public/pus_service4.h"
