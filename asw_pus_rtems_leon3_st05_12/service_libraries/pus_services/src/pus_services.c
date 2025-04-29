@@ -99,7 +99,7 @@ void pus_services_do_FDIR() {
 						&fault_info)) {
 					//TODO 08  Check If TM[5,X] is enabled using
 					// pus_service5_is_EvID_enabled
-					if (                                                 ) {
+					if (pus_service5_is_EvID_enabled(EvID)) {
 
 						pus_service1_tx_TM_5_X_param_check_value_fail(EvID,
 								&fault_info);

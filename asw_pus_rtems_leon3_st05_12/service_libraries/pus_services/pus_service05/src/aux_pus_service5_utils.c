@@ -131,7 +131,7 @@ void pus_service5_set_EvID_enable_flag(uint16_t EvID, bool_t enable_value) {
 				EvIDEnableConfig[index] |= mask;
 			} else {
 				//TODO 03 Use mask to clear the bit (tip: use ~ )
-				EvIDEnableConfig[index]
+				 EvIDEnableConfig[index] &= ~mask;
 			}
 		}
 	}

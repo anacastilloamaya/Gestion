@@ -70,14 +70,17 @@ VNextTimeout+= Pr_Time(1,0); // Add X sec + Y microsec
 time=VNextTimeout; 
  
 pus_services_update_params();
-
 pus_service4_update_all_stats();
-
 pus_service3_do_HK();
+<<<<<<< HEAD
+pus_services_do_FDIR();
+   //Program absolute timer 
+=======
 
   //TODO 07 call pus_services_do_FDIR();
-
+pus_services_do_FDIR();
 //Program absolute timer
+>>>>>>> 6d9cb93b91611dc8887ee389468b7d9606c9212f
    HK_FDIRTimer.InformAt( time ); 
 }
 
