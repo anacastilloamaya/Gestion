@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 package es.uah.aut.srg.edroom.mclev.data_sai.cdtcexecctrl;
 
 inport es.uah.aut.srg.micobs.langs;
@@ -11,4 +12,19 @@ sai cdtcexecctrl_iface
 	language := CPP(98);
 
 
+=======
+package es.uah.aut.srg.edroom.mclev.data_sai.cdtcexecctrl;
+
+inport es.uah.aut.srg.micobs.langs;
+
+sai cdtcexecctrl_iface
+{
+
+
+
+	version := v1;
+	language := CPP(98);
+
+
+>>>>>>> 6d9cb93b91611dc8887ee389468b7d9606c9212f
 };

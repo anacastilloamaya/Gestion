@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 dataclass TEDROOMWord64{
 
 
@@ -6,4 +7,14 @@ dataclass TEDROOMWord64{
 	version := v1;
 
 
+=======
+dataclass TEDROOMWord64{
+
+
+
+	uri := es.uah.aut.srg.edroom.mclev.data_sai.TEDROOMWord64.tedroomword64_iface;
+	version := v1;
+
+
+>>>>>>> 6d9cb93b91611dc8887ee389468b7d9606c9212f
 };

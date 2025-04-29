@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 dataclass CDEvAction{
 
 
@@ -6,4 +7,14 @@ dataclass CDEvAction{
 	version := v1;
 
 
+=======
+dataclass CDEvAction{
+
+
+
+	uri := es.uah.aut.srg.edroom.mclev.data_sai.cdevaction.cdevaction_iface;
+	version := v1;
+
+
+>>>>>>> 6d9cb93b91611dc8887ee389468b7d9606c9212f
 };

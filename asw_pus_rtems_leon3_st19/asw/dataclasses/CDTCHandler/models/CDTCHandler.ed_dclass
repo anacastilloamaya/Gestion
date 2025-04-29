@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 dataclass CDTCHandler{
 
 
@@ -6,4 +7,14 @@ dataclass CDTCHandler{
 	version := v1;
 
 
+=======
+dataclass CDTCHandler{
+
+
+
+	uri := es.uah.aut.srg.edroom.mclev.data_sai.cdtchandler.cdtchandler_iface;
+	version := v1;
+
+
+>>>>>>> 6d9cb93b91611dc8887ee389468b7d9606c9212f
 };

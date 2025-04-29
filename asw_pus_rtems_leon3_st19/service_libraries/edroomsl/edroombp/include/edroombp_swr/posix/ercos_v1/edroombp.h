@@ -139,7 +139,11 @@ class Pr_SemaphoreBin  :  public Pr_Semaphore
 {
 
 protected:
+<<<<<<< HEAD
     /** This attribute is the class mutex   */
+=======
+    /** This attribute is the class mutex   */
+>>>>>>> 6d9cb93b91611dc8887ee389468b7d9606c9212f
     sem_t sem;
 
 public:
@@ -383,7 +387,11 @@ public:
      */
     Pr_Task(void (*_taskCode)(void), /*  Task IP */
             const char *_p_name,              /*  Task name   */
+<<<<<<< HEAD
             TEDROOMPriority _priority,     /*  task priority   */
+=======
+            TEDROOMPriority _priority,     /*  task priority   */
+>>>>>>> 6d9cb93b91611dc8887ee389468b7d9606c9212f
             unsigned _stackSize);       /*  stack size  */
 
 #else
@@ -399,7 +407,11 @@ public:
      * IP code pointer to the task structure.
      */
     Pr_Task(void (*_taskCode)(void), /*  Task IP */
+<<<<<<< HEAD
             TEDROOMPriority _priority,     /*  task priority   */
+=======
+            TEDROOMPriority _priority,     /*  task priority   */
+>>>>>>> 6d9cb93b91611dc8887ee389468b7d9606c9212f
             unsigned _stackSize);       /*  stack size  */
 
 #endif

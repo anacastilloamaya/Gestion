@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 
 /*
@@ -10,3 +11,17 @@ sai sc_channel_drv_iface{
 	uri := .sc_channel_drv_iface;
 	version :=v1;
 };
+=======
+
+
+/*
+ * SAI Model.
+*/ 
+
+
+sai sc_channel_drv_iface{
+
+	uri := .sc_channel_drv_iface;
+	version :=v1;
+};
+>>>>>>> 6d9cb93b91611dc8887ee389468b7d9606c9212f

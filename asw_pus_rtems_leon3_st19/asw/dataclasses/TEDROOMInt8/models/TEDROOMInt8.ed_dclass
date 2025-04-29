@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 dataclass TEDROOMInt8{
 
 
@@ -6,4 +7,14 @@ dataclass TEDROOMInt8{
 	version := v1;
 
 
+=======
+dataclass TEDROOMInt8{
+
+
+
+	uri := es.uah.aut.srg.edroom.mclev.data_sai.TEDROOMInt8.tedroomint8_iface;
+	version := v1;
+
+
+>>>>>>> 6d9cb93b91611dc8887ee389468b7d9606c9212f
 };
