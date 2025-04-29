@@ -24,7 +24,7 @@
 #include "../emu_gss/emu_gss_pus_service03.h"
 
 //TODO 09 Add #include emu_gss_pus_service04.h
-//#include "../emu_gss/emu_gss_pus_service04.h"
+#include "../emu_gss/emu_gss_pus_service04.h"
 
 //#include "../emu_gss/emu_gss_pus_service05.h"
 //#include "../emu_gss/emu_gss_pus_service06.h"
