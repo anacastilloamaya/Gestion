@@ -46,7 +46,13 @@ void pus_service20_exec_tc(tc_handler_t *ptc_handler){
 
 	//TODO 05 exec TC[20,X] using the corresponding pus_service3_exec_TC_20_X
 
+	case(1):
+			pus_service20_exec_TC_20_1(ptc_handler);
+	break;
 
+	case(3):
+			pus_service20_exect_TC_20_3(ptc_handler);
+	break;
 
 
 	default:

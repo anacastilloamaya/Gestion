@@ -31,7 +31,7 @@
 //#include "../emu_gss/emu_gss_pus_service19.h"
 
 //TODO 06 Add #include emu_gss_pus_service20.h
-//#include "../emu_gss/emu_gss_pus_service20.h"
+#include "../emu_gss/emu_gss_pus_service20.h"
 
 
 //#include "../emu_gss/emu_gss_pus_service128.h"
